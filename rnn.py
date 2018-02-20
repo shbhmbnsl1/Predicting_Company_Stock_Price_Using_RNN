@@ -31,11 +31,25 @@ for i in range(60, 1258):
     
 X_train, y_train = np.array(X_train), np.array(y_train)
 
+
+# Reshaping
+# adding number of predictors (indicators)
+X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
     
 
 
 
 # Part 2 - Building the RNN
+
+# Importing the Keras Libraries and packages
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers import Dropout
+
+# Initializing the RNN 
+regressor = Sequential()
+
 
 # Part 3 - Make predictions and visualization
  
